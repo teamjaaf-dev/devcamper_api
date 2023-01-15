@@ -19,6 +19,9 @@ const bootcamps = require('./routes/bootcamps')
 
 const app = express()
 
+// Body parser (maybe middleware)
+app.use(express.json())
+
 // Moount Routers 
 app.use('/api/v1/bootcamps', bootcamps)
 
