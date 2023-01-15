@@ -2,6 +2,9 @@ const express = require('express')
 const dotenv = require('dotenv') 
 const colors = require('colors')
 
+
+
+
 const connectDB  = require('./config/db')
 
 // load env vars
@@ -20,6 +23,7 @@ const bootcamps = require('./routes/bootcamps')
 const app = express()
 
 // Body parser (maybe middleware)
+
 app.use(express.json())
 
 // Moount Routers 
