@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const colors = require('colors')
 
 
-
+const errorHandler = require('./middleware/error')
 
 const connectDB  = require('./config/db')
 
@@ -28,6 +28,8 @@ app.use(express.json())
 
 // Moount Routers 
 app.use('/api/v1/bootcamps', bootcamps)
+
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
